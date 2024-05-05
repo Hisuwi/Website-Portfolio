@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivan - Web Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/me.png" alt="Ivan Quilang" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Ivan Jade Quilang</h1>
+
+          <p class="title">Aspiring Web developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Gmail</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">quilangivanjade3@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">09353828236</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">December 03, 2005</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Alae, Manolo Fortich, Bukidnon</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/quilangivanjade" class="social-link" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+        </li>
+        
+        <li class="social-item">
+            <a href="https://twitter.com/IvnJdee" class="social-link" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </li>
+        
+        <li class="social-item">
+            <a href="https://www.instagram.com/ivnjdee/" class="social-link" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+        </li>
+        
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Home</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>About Me</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certificates</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="home">
+
+        <header>
+          <h2 class="h2 article-title">Profile</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a Grade 12 student at Manolo Fortich National High School, and I aspire to be a web developer. I enjoy coding and debugging errors on my website.
+          </p>
+
+          <p>
+            My dream is to pursue a career as a programmer, specifically focusing on developing websites that are both functional and user-friendly. I am passionate about technology and the endless possibilities that programming offers in terms of creating interactive, engaging, and useful digital environments. To lay a solid foundation for my future, I am currently dedicating time to learning the basics of coding. This step is crucial as it prepares me for more advanced studies in computer science once I begin my college education. By starting early, I aim to have a strong understanding of programming concepts and practices, which will undoubtedly benefit me in my academic and professional future. I believe that with persistence and dedication, 
+            I can achieve my goal of becoming a skilled programmer who contributes innovative solutions to the digital world.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Learning to Code</h4>
+
+                <p class="service-item-text">
+                  This self-driven initiative is helping me build a strong foundation in programming as I prepare for a future in technology.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  Developing a website is an enjoyable and worthwhile way for me to spend my free time.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Watching Tutorials</h4>
+
+                <p class="service-item-text">
+                  By watching online tutorials on website programming, I am gaining new insights and knowledge about coding.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Taking Pictures of My Project</h4>
+
+                <p class="service-item-text">
+                  To ensure that the websites I create at this age remain memorable, especially as I grow older, I want to keep a record so I can always remember the projects I developed during this time.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title></h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+      <!--
+        - #RESUME
+      -->
+
+      <article class="about" data-page="about-me">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Alae Central Elementary School</h4>
+
+              <span>Kindergarten - Grade 1</span>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Mantibugao Elementary School</h4>
+
+              <span>Grade 2- 6</span>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Manolo Fortich National High School</h4>
+
+              <span>Grade 7 - 12</span>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Achievements</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Being Advanced in Networking</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                I was the first in my class to try networking when I was in 11th grade, before any of my classmates.
+                 After that, I was able to teach and share my knowledge with them because I had memorized the steps of networking from the attempts I made before they tried it.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">1st Runner-Up in Cheer Parade</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                I participate on a Cheer Parade as a representative on grade 12 for Intramurals.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">National Certificate II Holder</h4>
+
+              <span>2024</span>
+
+              <p class="timeline-text">
+                I passed the NCII exam in Computer System Servicing in January 2024.
+              </p>
+
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">With High Honor</h4>
+
+              <span>2024</span>
+
+              <p class="timeline-text">
+                After passing the NCII exam, I was honored to receive an award for with high honor. This recognition not only reflects my hard work and dedication 
+                but also motivates me to continue striving for excellence in my field.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">My Skills</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Encoding</h4>
+
+              <p class="timeline-text">
+                I can type 70-81 words per minute.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web Development</h4>
+
+              <p class="timeline-text">
+                I have a bit of background in programming; I have already used the following programming languages: PHP, SQL, HTML, CSS, and JavaScript.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Working with Microsoft Office</h4>
+
+              <p class="timeline-text">
+                Microsoft Office is one of the world’s most popular business solutions with and is widely used in both the academic and professional fields. I'm 
+               familiar with its most well-known programs by the time when i was in junior high school. These include: Word, Excel, Powerpoint 
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Installing Operating System/Reformat Computer</h4>
+
+              <p class="timeline-text">
+                I possess proficient skills in installing various operating systems and reformatting computers. This expertise includes preparing devices for fresh installations, configuring system settings for optimal performance, and troubleshooting installation processes. 
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Troubleshooting Computers</h4>
+
+              <p class="timeline-text">
+                I am skilled in troubleshooting computer issues, encompassing both hardware and software problems. My expertise includes diagnosing system errors, resolving connectivity issues, and optimizing computer performance. 
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Networking</h4>
+
+              <p class="timeline-text">
+                I have a strong foundation in networking, with skills in setting up, managing, and troubleshooting network configurations.  
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Maintaining and Repairing Computer Systems</h4>
+
+              <p class="timeline-text">
+                I am proficient in maintaining and repairing computer systems and networks. My expertise spans routine system maintenance, hardware upgrades, and software installation to ensure optimal performance and security. 
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#"> <!-- This href can be used for non-icon clicks or can be removed if not needed -->
+                <figure class="project-img">
+                  <!-- Hoverable Icon Container that acts as a link to the Spotify page -->
+                  <a href="./Spotify/index.html" class="project-item-icon-link" target="_blank">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                  </a>
+            
+                  <img src="./assets/images/spotify.png" alt="ICTify" loading="lazy">
+                </figure>
+            
+                <h3 class="project-title">ICTify</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#"> <!-- This href can be used for non-icon clicks or can be removed if not needed -->
+                <figure class="project-img">
+                  <!-- Hoverable Icon Container that acts as a link to the Spotify page -->
+                  <a href="./Calculator/index.html" class="project-item-icon-link" target="_blank">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                  </a>
+            
+                  <img src="./assets/images/calculator.png" alt="calculator" loading="lazy">
+                </figure>
+            
+                <h3 class="project-title">Web Calculator</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#"> <!-- This href can be used for non-icon clicks or can be removed if not needed -->
+                <figure class="project-img">
+                  <!-- Hoverable Icon Container that acts as a link to the Spotify page -->
+                  <a href="./TicTacToe/index.html" class="project-item-icon-link" target="_blank">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                  </a>
+            
+                  <img src="./assets/images/tictactoe.png" alt="Game" loading="lazy">
+                </figure>
+            
+                <h3 class="project-title">Web Tic Tac Toe Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#"> <!-- This href can be used for non-icon clicks or can be removed if not needed -->
+                <figure class="project-img">
+                  <!-- Hoverable Icon Container that acts as a link to the Spotify page -->
+                  <a href="grading.html" class="project-item-icon-link" target="_blank">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                  </a>
+            
+                  <img src="./assets/images/home.png" alt="Web-Based Grading System" loading="lazy">
+                </figure>
+            
+                <h3 class="project-title">Web-Based Grading System</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#"> <!-- This href can be used for non-icon clicks or can be removed if not needed -->
+                <figure class="project-img">
+                  <!-- Hoverable Icon Container that acts as a link to the Spotify page -->
+                  <a href="./newyear/index.html" class="project-item-icon-link" target="_blank">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                  </a>
+            
+                  <img src="./assets/images/countdown.png" alt="countdown" loading="lazy">
+                </figure>
+            
+                <h3 class="project-title">New Year Countdown</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="certificates">
+
+        <header>
+          <h2 class="h2 article-title">Certificates</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="nc.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/nc.png" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">February 2, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">National Certificate II</h3>
+
+                  <p class="blog-text">
+                    This certification validates proficiency in Computer System Servicing, emphasizing the essential skills 
+                    required to install, maintain, and troubleshoot computer systems and networks.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="immersion.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/immersion.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">March 08, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Certificate of Completion on Work Immersion</h3>
+
+                  <p class="blog-text">
+                    This certificate acknowledges the successful completion of a 10-day Work Immersion Program at the Bureau of Fire Protection. The program provided hands-on experience and insights into the daily operations
+                     and responsibilities critical to fire protection services. The participant demonstrated commitment and eagerness to learn, acquiring essential skills in public safety and emergency response.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="lifesupport.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/lifesupport.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">March, 08 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Basic Life Support Certificate</h3>
+
+                  <p class="blog-text">
+                    This certificate certifies completion of the Basic Life Support (BLS) training conducted by the Bureau of Fire Protection (BFP). The course focused on critical life-saving techniques, including cardiopulmonary resuscitation (CPR), use of automated external defibrillators (AEDs), and other emergency responses to life-threatening situations.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="firetechnique.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/firetechnique.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">March, 08 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Basic Fire Fighting Technique Certificate</h3>
+
+                  <p class="blog-text">
+                    This certificate is awarded upon successful completion of the Basic Fire Fighting Technique course provided by the Bureau of Fire Protection (BFP). The training covered fundamental aspects of fire safety, including the use of firefighting equipment, understanding fire dynamics, and implementing effective fire suppression strategies.
+
+
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="firesafety.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/firesafety.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">March, 08 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Fire Safety Education Certificate</h3>
+
+                  <p class="blog-text">
+                    This certificate acknowledges the successful completion of a comprehensive Fire Safety Education lecture conducted by the Bureau of Fire Protection (BFP). The program covered crucial topics, including fire risk assessment, implementation of fire safety regulations, emergency evacuation procedures, and effective communication during fire incidents. 
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="firstaid.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/firstaid.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">March, 08 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Standard First Aid Certificate</h3>
+
+                  <p class="blog-text">
+                    This certificate confirms completion of the Standard First Aid course provided by the Bureau of Fire Protection (BFP). The comprehensive training encompassed essential first aid techniques and procedures necessary for responding effectively to a 
+                    wide range of common injuries and medical emergencies. Topics covered include CPR, wound care, managing fractures, and handling sudden illnesses in a variety of settings.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

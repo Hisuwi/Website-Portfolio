@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICTify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="spotify.png" alt="Spotify Logo" />
+                <span>ICTify</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Developer</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <div class="content-header">
+                <h1>Welcome to ICTify</h1>
+            </div>
+            <section class="category">
+                <h2>Podcast Playlists</h2>
+                <div class="playlists">
+                    <div class="playlist-item podcast-box">
+                        <img src="logog.png" alt="Podcast Playlist">
+                        <h3>ISSUES Talks</h3>
+                        <p>This category contains a selection of our best podcast playlists.</p>
+                    </div>
+                    <!-- More podcast playlists here -->
+                </div>
+            </section>
+            <section class="category">
+                <h2>Music Playlists</h2>
+                <div class="playlists">
+                    <div class="playlist-item">
+                        <img src="image/eraserheads.jpg" alt="Music Playlist 1">
+                        <h3>Eraserheads</h3>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="image/onedirection.jfif" alt="Music Playlist 2">
+                        <h3>One Direction</h3>
+                    </div>
+                    <!-- More music playlists here -->
+                </div>
+            </section>
+        </main>
+
+        <div id="podcastDetails" style="display: none;">
+            <div class="back-arrow">
+                <a href="#" onclick="return showMainContent();">
+                    <img src="image/back-button.png" alt="Go Back" />
+                </a>
+            </div>
+            <div class="content-header">
+                <div class="header-container">
+                    <img src="logog.png" alt="ISSUES TALKS" class="podcast-large-image">
+                    <div class="text-container">
+                        <h1>ISSUES TALKS</h1>
+                        <p>This category contains a selection of our best podcast playlists.</p>
+                    </div>
+                </div>
+                <div class="episodes">
+                    <h2>Episodes</h2>
+                    <ul>
+                        <li id="episode1" onclick="playEpisode('Episode 1: Introduction to Issues', 'cyril.mp3')">Episode 1: Introduction to Issues</li>
+                        <li onclick="playEpisode('Episode 2: Deep Dive into Topic A', '1975.mp3')">Episode 2: Deep Dive into Topic A</li>
+                        <li onclick="playEpisode('Episode 3: Understanding Topic B', 'american.mp3')">Episode 3: Understanding Topic B</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="now-playing-bar" id="nowPlayingBar" style="display: none;">
+            <audio id="audioPlayer" controls hidden></audio>
+            <div class="controls-track-container">
+                <div class="track-info">
+                    <span id="trackTitle">No track playing</span>
+                </div>
+                <div class="controls-container">
+                    <button id="prevTrack" class="prev" onclick="previousTrack()">Prev</button>
+                    <button class="play-pause" style="background-image: url('pause-button.png');" onclick="togglePlayPause()"></button>
+                    <button id="nextTrack" class="next" onclick="nextTrack()">Next</button>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="timer-bar">
+                    <span id="currentTime">00:00</span>
+                    <input type="range" id="progressBar" value="0" max="100" class="progress-bar">
+                    <span id="totalDuration">00:00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="volume-control">
+            <label for="volumeSlider">Volume:</label>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>    
+
+    <script src="script.js"></script>
+</body>
+</html>

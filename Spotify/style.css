@@ -1,0 +1,538 @@
+@media (max-width: 600px) {
+    .category h2 {
+        font-size: 1.2em;  /* Smaller heading on mobile */
+    }
+    .category p {
+        font-size: 0.9em;  /* Smaller description text on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .podcast-large-image {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    .text-container {
+        width: 100%; /* Full width for the text container */
+    }
+
+    .text-container h1 {
+        font-size: 2em; /* Slightly smaller font size on small devices */
+    }
+
+    .text-container p {
+        font-size: 1em; /* Adjust description font size for small devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container .text-container h1 {
+        font-size: 2.5em;  /* Slightly smaller on mobile devices for better fit */
+    }
+}
+
+@media (max-width: 768px) {
+    .episodes {
+        margin-top: 20px; /* Less space on smaller screens */
+        padding: 10px; /* Less padding for tighter spaces */
+    }
+}
+
+@media (max-width: 768px) {
+    .episodes li:hover {
+        background-color: #202020; /* Slightly lighter hover effect for mobile, if applicable */
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #fff;
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #000;
+    color: #b3b3b3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1DB954;
+    padding: 10px 0;
+}
+
+.sidebar .logo img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li.active a {
+    color: #1DB954;
+}
+
+.main-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.content-header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.now-playing-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #282828;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls-track-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.track-info {
+    width: 100%; /* Full width to maintain structure */
+    padding: 5px 20px; /* Adjusted padding */
+    font-size: 18px; /* Slightly larger font size */
+    font-weight: bold; /* Make the font bold */
+    color: white;
+    text-align: center; /* Center align the text if preferred */
+    margin-bottom: 10px; /* Spacing before the control buttons */
+}
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px; /* Spaces out the buttons */
+}
+
+.progress-container {
+    width: 80%; /* Adjust this value as needed to make the bar shorter */
+    margin: 0 auto; /* Center the bar in the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls-container button {
+    background: none;
+    border: none;
+    width: 50px;  /* Set a specific width */
+    height: 50px; /* Set a specific height */
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.548); /* Lighter background for better visibility */
+    border-radius: 75%; /* Makes the button background circular */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+.controls-container button.prev {
+    background-image: url('previous.png');
+}
+
+.controls-container button.play-pause {
+    background-image: url('play-button.png');
+}
+
+.controls-container button.next {
+    background-image: url('next-button.png');
+}
+
+.controls-container button:hover {
+    background-color: rgba(250, 246, 246, 0.884); /* Slightly darker on hover */
+}
+
+.play-pause.play {
+    background-image: url('play-button.png');
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+.play-pause {
+    width: 50px;  /* Adjust size as necessary */
+    height: 50px; /* Adjust size as necessary */
+    background-size: cover;
+    background-position: center;
+    border: none; /* Removes border */
+    cursor: pointer;
+}
+
+
+
+.timer-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#progressBar {
+    width: 100%; /* Ensure the progress bar fills the container */
+    -webkit-appearance: none; /* Override default browser styles */
+    appearance: none;
+    height: 5px; /* Adjust thickness of the bar */
+    background: #ddd; /* Background of the bar */
+    cursor: pointer;
+}
+
+#progressBar::-webkit-slider-thumb, 
+#progressBar::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; /* Size of the thumb */
+    height: 15px; /* Make sure width and height are equal for a circle */
+    border-radius: 50%; /* Circle shape */
+    background: #1DB954; /* Color of the thumb, match your design */
+    box-shadow: 0 0 2px #000; /* Optional: Adds shadow for better visibility */
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth color transition on hover or focus */
+}
+
+#progressBar::-webkit-slider-thumb:hover,
+#progressBar::-moz-range-thumb:hover {
+    background: #0ebe41; /* Lighter or darker on hover for better interaction feedback */
+}
+
+
+
+
+#currentTime, #totalDuration {
+    min-width: 50px;
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+}
+
+.playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.playlist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #181818;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.playlist-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.playlist-item h3 {
+    color: #fff;
+    margin-top: 8px;
+}
+
+.playlist-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.content-header {
+    padding: 20px;
+    color: #fff;
+}
+
+.category h2 {
+    padding-left: 20px;
+    font-size: 1.5em;
+    color: #fff;  /* Assuming white text color for headings */
+}
+
+.category p {
+    padding: 0 10px;
+    color: #949494;  /* Lighter color for descriptions */
+    font-size: 1em;  /* Standard text size */
+    margin-top: 5px;  /* Space between the title and the description */
+}
+
+
+
+.playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.playlist-item {
+    background: #181818;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    cursor: pointer; /* Indicates the item is clickable */
+    transition: transform 0.2s ease-in-out;
+}
+
+.playlist-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.playlist-item h3 {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.playlist-item:hover {
+    transform: scale(1.05);
+}
+
+.podcast-large-image {
+    width: 50%; /* Set to 100% of the container width, adjust if needed */
+    max-width: 200px; /* Maximum size to ensure it doesn’t become too large */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add spacing below */
+}
+
+#podcastDetails h1 {
+    font-size: 8em; /* Increase the font size for the podcast title */
+    color: #fff; /* Assuming white text color */
+    text-align: center; /* Center the title */
+}
+
+#podcastDetails p {
+    text-align: center; /* Center the description text if desired */
+    color: #ccc; /* Light gray color for the description */
+    margin-bottom: 20px; /* Add some space below the description */
+}
+
+#podcastDetails .episodes h2 {
+    font-size: 2.2em; /* Slightly larger episode heading */
+    color: #fff; /* White color for episode titles */
+}
+
+#podcastDetails .episodes ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+#podcastDetails .episodes li {
+    padding: 10px 0; /* Spacing between episodes */
+    border-bottom: 1px solid #333; /* Separator for each episode */
+    color: #ddd; /* Lighter text color for episodes */
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.app {
+    width: 100%; /* Ensure the main app container takes full width */
+    box-sizing: border-box; /* Include padding and border in the width and height */
+}
+
+.header-container {
+    padding: 20px; /* Ensure there's padding around the content */
+    display: flex;
+    align-items: center;
+    justify-content: start;  /* Align items from the start to allow text next to the image */
+    background: #181818;  /* Background color for contrast */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.7);  /* Strong shadow for depth */
+    padding: 20px;  /* Adequate padding inside the container */
+    margin: 0 auto;  /* Remove any automatic margin */
+    width: 100%;  /* Full width */
+    box-sizing: border-box;  /* Include padding and border in width */
+}
+
+
+.podcast-large-image {
+    width: auto; /* Maintain original image width */
+    max-width: 30%; /* Limit the width to 30% of the header container */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between the image and the text */
+}
+
+.text-container {
+    flex-grow: 1; /* Take the remaining space in the header container */
+}
+
+.text-container h1 {
+    font-size: 150em; /* Increase as needed */
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 2.5em; /* Increase as needed */
+    color: #ccc;
+}
+
+.header-container .text-container h1 {
+    font-size: 3em;  /* Significantly larger font size */
+    font-weight: bold;  /* Bold font weight */
+    color: #fff;  /* Ensure the color is bright for good contrast */
+    margin: 0;  /* Adjust margin to ensure spacing is as per design */
+    padding: 10px 0;  /* Padding for better spacing around the text */
+}
+
+.back-arrow {
+    align-self: center;  /* Centers the back button vertically within the flex container */
+    margin-right: auto;  /* If you want it to stay at the left but aligned with other items */
+}
+
+.back-arrow a {
+    display: inline-block;
+    padding: 10px;  /* Adjust padding to ensure the circle encompasses the image nicely */
+    background-color: rgba(255, 255, 255, 0.411);  /* White background */
+    border-radius: 50%;  /* Full radius to create a circle */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);  /* Optional: Adds a subtle shadow for depth */
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+}
+
+.back-arrow a:hover {
+    background-color: #f0f0f0;  /* Slightly darker background on hover for interaction feedback */
+    cursor: pointer;
+}
+
+.back-arrow img {
+    display: block;  /* Ensures the image fits well within the link without extra space */
+    width: 25px;  /* Adjust size as necessary */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+.episodes {
+    margin-top: 40px; /* Increase the top margin to create more space */
+    background: #202020; /* Optional: Different background for visual separation */
+    padding: 20px; /* Padding inside the episodes container */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Optional: Adds depth */
+}
+
+.episodes h2 {
+    color: #fff;
+    margin-bottom: 20px; /* Space below the section title */
+}
+
+.episodes ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes padding if any set by browser defaults */
+}
+
+.episodes li {
+    padding: 10px 20px; /* Adjust padding as needed for spacing */
+    border-bottom: 1px solid #333; /* Visual separator */
+    color: #ccc; /* Default text color */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.episodes li:hover {
+    background-color: #383838; /* Darker background for hover state */
+    color: #fff; /* White text color for better contrast on hover */
+    cursor: pointer; /* Cursor pointer to indicate interactiveness */
+}
+
+/* Additional styles for volume control within the playing bar */
+.volume-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;  /* Space it out from other controls */
+}
+
+.volume-control label {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.volume-slider {
+    width: 8px;
+    height: 80px;  /* Vertical length of the slider */
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);  /* Rotate slider to be vertical */
+    transition: opacity .2s;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #1DB954;
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #1DB954;
+    cursor: pointer;
+}
